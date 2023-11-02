@@ -1,0 +1,26 @@
+﻿body {
+    margin: 0;
+    scroll-behavior:smooth;
+    overflow: scroll;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 992px){
+    #background-video {
+        min-width: 500%;
+    }
+}
+
+@media (max-width: 600px) {
+    #background-video {
+        min-width: 900%;
+    }
+}

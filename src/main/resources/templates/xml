@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <!-- Include any CSS or JavaScript resources here -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" />
+</h:head>
+
+<h:body>
+    <h:form>
+        <!-- Header -->
+        <ui:include src="fragments/header.xhtml" />
+
+        <main>
+            <section>
+                <div class="container wow fadeIn">
+                    <!-- Carousel -->
+                    <h:panelGroup layout="block" styleClass="oleez-landing-carousel carousel slide" id="oleezLandingCarousel" data-ride="carousel">
+                        <h:panelGroup layout="block" styleClass="carousel-inner" role="listbox">
+                            <!-- Carousel items -->
+                            <h:panelGroup layout="block" styleClass="carousel-item active">
+                                <h:graphicImage library="images" name="Banner_1@2x.jpg" alt="First slide" styleClass="w-100" />
+                                <h:panelGroup layout="block" styleClass="carousel-caption">
+                                    <h2 data-animation="animated fadeInRight">
+                                        <span>Remarkable</span>
+                                    </h2>
+                                    <h2 data-animation="animated fadeInRight">
+                                        <span>Digital agency</span>
+                                    </h2>
+                                    <h:commandLink action="#{bean.exploreProject}" styleClass="carousel-item-link" value="EXPLORE PROJECT" />
+                                </h:panelGroup>
+                            </h:panelGroup>
+                            <!-- Repeat similar blocks for other carousel items -->
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </div>
+            </section>
+            <!-- Translate other sections similarly -->
+        </main>
+
+        <!-- Footer -->
+        <ui:include src="fragments/footer.xhtml" />
+    </h:form>
+
+    <!-- Add JavaScript resources here -->
+    <h:outputScript library="js" name="main.js" />
+    <h:outputScript library="js" name="landing.js" />
+    <h:outputScript>
+        new WOW({ mobile: false }).init();
+    </h:outputScript>
+</h:body>
+</html>

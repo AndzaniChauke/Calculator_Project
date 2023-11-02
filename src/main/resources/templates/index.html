@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <title>Calculations</title>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon"/>
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet"/>
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet"/>
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="b">
+    <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+            <g transform="translate(9.5,19)">
+                <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+                    <circle class="bike__spokes" r="5" />
+                    <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                </g>
+            </g>
+            <g transform="translate(24,19)">
+                <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
+                    <circle class="bike__pedals" r="4" />
+                    <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+                </g>
+            </g>
+            <g transform="translate(38.5,19)">
+                <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+                    <circle class="bike__spokes" r="5" />
+                    <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                </g>
+            </g>
+            <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+            <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79" />
+            <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+            <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+        </g>
+    </svg>
+</div>
+
+<video id="background-video" autoplay loop muted poster="dev_styling/background-image.jpg">
+    <source src="dev_styling/Tspace-background.mp4" type="video/mp4"/>
+    <source src="dev_styling/Tspace-background.webm" type="video/webm"/>
+    <!-- Add more <source> elements for other video formats if needed -->
+</video>
+<link href="dev_styling/style.css" rel="stylesheet" />
+<form id="form1" runat="server">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+            <style>
+             header{
+                background-color: rgba(40, 58, 90, 0);
+                }
+            </style>
+            <h1 class="logo me-auto"><a href="index.aspx">Calculations</a></h1>
+
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/login">Login</a></li>
+                    <li><a class="nav-link scrollto" href="/registration">Registration</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section style="background: none" id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <h1>Calculating equations  has never been easier.</h1>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="/registration" class="btn-get-started scrollto">  Registration</a>
+
+                        <a href="/login" class="btn-get-started scrollto" style="margin-left: 20px;">  Login</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="../assets/img/hero-img.png" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+
+
+    </main><!-- End #main -->
+
+
+    <style>
+            :root {
+	            --hue: 223;
+	            --bg: hsl(var(--hue),90%,90%);
+	            --fg: hsl(var(--hue),90%,10%);
+	            --primary: hsl(var(--hue),90%,50%);
+	            --trans-dur: 0.3s;
+            }
+            .b {
+                position: absolute;
+	            background-color: var(--bg);
+	            color: var(--fg);
+	            display: flex;
+	            font: 1em/1.5 sans-serif;
+	            height: 100vh;
+                width: 100%;
+                z-index: 10000;
+	            transition:
+		            background-color var(--trans-dur),
+		            color var(--trans-dur);
+                border-radius: 0%;
+            }
+            .bike {
+                color: var(--fg);
+	            display: block;
+	            margin: auto;
+	            width: 30%;
+	            height: auto;
+            }
+            .bike__body,
+            .bike__front,
+            .bike__handlebars,
+            .bike__pedals,
+            .bike__pedals-spin,
+            .bike__seat,
+            .bike__spokes,
+            .bike__spokes-spin,
+            .bike__tire {
+	            animation: bikeBody 3s ease-in-out infinite;
+	            stroke: var(--primary);
+	            transition: stroke var(--trans-dur);
+            }
+            .bike__front {
+	            animation-name: bikeFront;
+            }
+            .bike__handlebars {
+	            animation-name: bikeHandlebars;
+            }
+            .bike__pedals {
+	            animation-name: bikePedals;
+            }
+            .bike__pedals-spin {
+	            animation-name: bikePedalsSpin;
+            }
+            .bike__seat {
+	            animation-name: bikeSeat;
+            }
+            .bike__spokes,
+            .bike__tire {
+	            stroke: currentColor;
+            }
+            .bike__spokes {
+	            animation-name: bikeSpokes;
+            }
+            .bike__spokes-spin {
+	            animation-name: bikeSpokesSpin;
+            }
+            .bike__tire {
+	            animation-name: bikeTire;
+            }
+
+            /* Dark theme */
+            @media (prefers-color-scheme: dark) {
+	            :root {
+		            --bg: hsl(var(--hue),90%,10%);
+		            --fg: hsl(var(--hue),90%,90%);
+	            }
+            }
+
+            /* Animations */
+            @keyframes bikeBody {
+	            from { stroke-dashoffset: 79; }
+	            33%,
+	            67% { stroke-dashoffset: 0; }
+	            to { stroke-dashoffset: -79; }
+            }
+            @keyframes bikeFront {
+	            from { stroke-dashoffset: 19; }
+	            33%,
+	            67% { stroke-dashoffset: 0; }
+	            to { stroke-dashoffset: -19; }
+            }
+            @keyframes bikeHandlebars {
+	            from { stroke-dashoffset: 10; }
+	            33%,
+	            67% { stroke-dashoffset: 0; }
+	            to { stroke-dashoffset: -10; }
+            }
+            @keyframes bikePedals {
+	            from {
+		            animation-timing-function: ease-in;
+		            stroke-dashoffset: -25.133;
+	            }
+	            33%,
+	            67% {
+		            animation-timing-function: ease-out;
+		            stroke-dashoffset: -21.991;
+	            }
+	            to {
+		            stroke-dashoffset: -25.133;
+	            }
+            }
+            @keyframes bikePedalsSpin {
+	            from { transform: rotate(0.1875turn); }
+	            to { transform: rotate(3.1875turn); }
+            }
+            @keyframes bikeSeat {
+	            from { stroke-dashoffset: 5; }
+	            33%,
+	            67% { stroke-dashoffset: 0; }
+	            to { stroke-dashoffset: -5; }
+            }
+            @keyframes bikeSpokes {
+	            from {
+		            animation-timing-function: ease-in;
+		            stroke-dashoffset: -31.416;
+	            }
+	            33%,
+	            67% {
+		            animation-timing-function: ease-out;
+		            stroke-dashoffset: -23.562;
+	            }
+	            to {
+		            stroke-dashoffset: -31.416;
+	            }
+            }
+            @keyframes bikeSpokesSpin {
+	            from { transform: rotate(0); }
+	            to { transform: rotate(3turn); }
+            }
+            @keyframes bikeTire {
+	            from {
+		            animation-timing-function: ease-in;
+		            stroke-dashoffset: 56.549;
+		            transform: rotate(0);
+	            }
+	            33% {
+		            stroke-dashoffset: 0;
+		            transform: rotate(0.33turn);
+	            }
+	            67% {
+		            animation-timing-function: ease-out;
+		            stroke-dashoffset: 0;
+		            transform: rotate(0.67turn);
+	            }
+	            to {
+		            stroke-dashoffset: -56.549;
+		            transform: rotate(1turn);
+	            }
+            }
+    </style>
+    <script>
+            window.addEventListener('load', function () {
+                var preloader = document.querySelector('.b');
+
+                if (preloader) {
+                    preloader.style.display = 'none';
+                }
+            });
+        </script>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+</form>
+</body>
+</html>
